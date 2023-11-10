@@ -1,0 +1,9 @@
+Ошибка в kafkaRuntimeError
+Ошибка означает что в bootstrap.servers не указаны разрешимые URL-адреса начальной загрузки. 
+2023-08-30 20:13:24,241 ERROR [io.qua.run.Application] (main) Failed to start application (with profile [prod]): org.apache.kafka.common.config.ConfigException: No resolvable bootstrap urls given in bootstrap.servers
+
+Нужно перепроверить значения bootstrap.servers и убедится, что IP-адрес или hostname, определенный в этом файле, правильный и работает. 
+Еще может помочь:
+Обновить конфигурацию Kafka
+Использовать IP адрес вместо hostname
+Удаление конфигурации «metadata.broker.list» из кода, так как он может быть устаревшим
