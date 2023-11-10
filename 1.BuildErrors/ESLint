@@ -1,0 +1,12 @@
+Ошибка в сборке npm (eslint)
+Описание ошибки здесь. Это ошибка импорта
+[2023-07-26T09:49:38.215Z] [eslint] 
+[2023-07-26T09:49:38.215Z] src/pages/Project/BimProject/WorkOrder/BimWorkOrderPriceTable/hooks/useBimWorkOrderDeletePrices.tsx
+[2023-07-26T09:49:38.215Z]   Line 6:1:  There should be at least one empty line between import groups  import/order
+[2023-07-26T09:49:38.215Z]   Line 6:1:  `gql/graphql` import should occur before import of `react`     import/order
+[2023-07-26T09:49:38.215Z] 
+[2023-07-26T09:49:38.215Z] Search for the keywords to learn more about each error.
+
+There should be at least one empty line between import groups эта ошибка говорит о том что между группами импорта должна быть хотя бы одна пустая строка. Эту ошибку легко исправить сделав отступ в конфиге ESLint в разделе import/order 
+между группами
+`gql/graphql` import should occur before import of `react` - обновить версию eslint-plugin-import 
